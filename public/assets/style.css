@@ -1,0 +1,19 @@
+.columns{
+    display: flex;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.column>.columns{
+    display: flex;
+    display: row;
+    justify-content: left;
+    margin-left:-3%;
+}
+input{
+    
+    display: flex;
+    margin: 0%  10% 0% 10% ;   
+}

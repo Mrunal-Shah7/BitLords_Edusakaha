@@ -1,0 +1,68 @@
+*
+{
+    font-family: 'Montserrat', sans-serif;
+
+}
+:root{
+    --primary-100:#0085ff;
+    --primary-200:#69b4ff;
+    --primary-300:#e0ffff;
+    --accent-100:#006fff;
+    --accent-200:#e1ffff;
+    --text-100:#FFFFFF;
+    --text-200:#9e9e9e;
+    --bg-100:#1E1E1E;
+    --bg-200:#2d2d2d;
+    --bg-300:#454545;
+
+}
+.navbar{
+    min-height: 70px !important;
+    border-radius: 0px 0px 10px 10px;
+    background-color: rgba(80, 75, 75, 0.194) !important;
+}
+.signin,.signup{
+    background-color: var(--primary-100)!important;
+    border-radius: 0px !important;
+    margin-left: 10px;
+    color: var(--text-100) !important;
+}
+.signin{
+    margin-right: 50px;
+}
+.signup{
+    background-color: transparent !important;
+}
+.maintitle{
+    margin-left: 50px;
+}
+.signupimg{
+    object-fit:cover;
+    height: 100vh !important;
+    width: 700 px;
+}
+.cards,.box{
+
+    background: rgba(255, 255, 255, 0.062);
+    border-radius: 16px;
+    box-shadow: 5px 5px 25px 7px #fa0035;
+    backdrop-filter: blur(6.8px);
+    -webkit-backdrop-filter: blur(6.8px);
+    border: 1px solid rgba(254, 248, 248, 0.185);
+}
+.terms{
+    color: var(--primary-200);
+}
+.terms:is(:hover,:active){
+    color: #fa0035;
+}
+
+input {
+    background: transparent !important;
+    color: var(--accent-200) !important;
+    border: 2px solid var(--text-200) !important;
+}
+
+input::placeholder{
+    color: #9e9e9e !important;
+}
