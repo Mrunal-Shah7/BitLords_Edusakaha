@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\event;
 use Illuminate\Http\Request;
 use App\Models\user;
 use Hash;
@@ -54,18 +55,34 @@ class SignInController extends Controller
         $user = user::where('username','=',$request->username)->first();
 
         if($user->password == $request->password){
-            return "success";
+            return back()->with('success');
+
         }
         else{
             return back()->with('fail','Incorrect username or password !');
         }
 
+    }
+
+    public function display_newevent(){
+        return view('eventcreate');
+    }
+
+
+    public function store_newevent(Request $request){
+
+        $event = new event;
+
+        $request->title = $event->title;
+        $request->venue = $event->venue;
+        $request->s_date = $event->start_date;
+        $request->e_date = $event->end_date;
+        $request->description = $event->description;
+        $event->save();
 
 
 
     }
-
-
 
 
 

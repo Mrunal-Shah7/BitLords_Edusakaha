@@ -10,9 +10,12 @@ Route::get('/', function () {return view('welcome');});
 Route::get('/signin',[SignInController::class,'display_sign_in']);
 Route::get('/signup',[SignInController::class,'display_sign_up']);
 Route::get('/index',[SignInController::class,'display_index']);
+Route::get('/newevent',[SignInController::class,'display_newevent']);
+
 
 Route::post('/signup',[SignInController::class,'store_signup']);
 Route::post('/signin',[SignInController::class,'store_sign_in']);
+Route::post('/newevent',[SignInController::class,'store_newevent']);
 
 
 
@@ -47,3 +50,7 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
